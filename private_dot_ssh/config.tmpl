@@ -1,0 +1,29 @@
+Host stash.alm.mentorg.com
+        HostName stash.alm.mentorg.com
+	User git
+        ProxyCommand /bin/nc -x 172.17.0.22:1080 %h %p
+
+Host industrial.alm.mentorg.com
+        HostName industrial.alm.mentorg.com
+	User chombour
+        ProxyCommand /bin/nc -x 172.17.0.22:1080 %h %p
+
+Host india1
+  HostName 134.86.61.7
+  User {{ .chezmoi.group }}
+  ProxyCommand /bin/nc -x 172.17.0.22:1080 %h %p
+
+Host india4
+  HostName 134.86.61.10
+  User {{ .chezmoi.group }}
+  ProxyCommand /bin/nc -x 172.17.0.22:1080 %h %p
+
+Host node4
+  HostName 134.86.61.8
+  User {{ .chezmoi.group }}
+  ProxyCommand /bin/nc -x 172.17.0.22:1080 %h %p
+
+Host node5
+  HostName 134.86.61.14
+  User kali
+  ProxyCommand /bin/nc -x 172.17.0.22:1080 %h %p
