@@ -1,5 +1,7 @@
 {{- if eq .email "Cedric_Hombourger@mentor.com" }}
-export http_proxy=http://172.17.0.1:3128
-export https_proxy=http://172.17.0.1:3128
-export ftp_proxy=http://172.17.0.1:3128
+if grep -q "nameserver 172.17.0.1" /etc/resolv.conf; then
+    export http_proxy=http://172.17.0.1:3128
+    export https_proxy=http://172.17.0.1:3128
+    export ftp_proxy=http://172.17.0.1:3128
+fi
 {{- end }}
