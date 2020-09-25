@@ -3,3 +3,11 @@
 [user]
 	email = "{{ .email }}"
 	name = "{{ .name }}"
+
+{{- if eq .email "Cedric_Hombourger@mentor.com" }}
+[sendemail]
+        smtpEncryption = tls
+        smtpServer = email-eu.mentorg.com
+        smtpUser = MGC\\chombour
+        smtpServerPort = 587
+{{- end }}
