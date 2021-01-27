@@ -26,8 +26,8 @@ endif
 " Ensures reStructuredText files are also treated as pandoc files
 autocmd BufRead,BufNewFile *.rst
       \ setlocal filetype=pandoc | syntax clear
-autocmd BuffReadPost * if exists("b:current_syntax") && b:current_syntax == "pandoc"
-autocmd BuffReadPost *     setlocal textwidth=0 wrapmargin=0
-autocmd BuffReadPost *     let g:table_mode_corner_corner='+'
-autocmd BuffReadPost *     let g:table_mode_header_fillchar='='
-autocmd BuffReadPost * endif
+autocmd BufReadPost * if exists("b:current_syntax") && b:current_syntax == "pandoc"
+autocmd BufReadPost *     setlocal textwidth=0 wrapmargin=0
+autocmd BufReadPost *     let g:table_mode_corner_corner='+'
+autocmd BufReadPost *     let g:table_mode_header_fillchar='='
+autocmd BufReadPost * endif
