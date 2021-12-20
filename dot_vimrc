@@ -12,6 +12,7 @@ if dein#load_state('$HOME/.cache/dein')
    call dein#add('vim-pandoc/vim-pandoc')
    call dein#add('vim-pandoc/vim-pandoc-syntax')
    call dein#add('dhruvasagar/vim-table-mode')
+   call dein#add('itchyny/lightline.vim')
 
    " Required:
    call dein#end()
