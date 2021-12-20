@@ -1,3 +1,4 @@
+set laststatus=2
 set mouse="r"
 if &compatible
   set nocompatible               " Be iMproved
