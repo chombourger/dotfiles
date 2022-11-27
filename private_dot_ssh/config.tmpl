@@ -2,7 +2,7 @@ Host *
 	ServerAliveInterval 3
 
 Host build
-	HostName 192.168.1.102
+	HostName 192.168.1.18
 	User chombourger
 
 {{- if eq .email "Cedric_Hombourger@mentor.com" }}
@@ -10,40 +10,57 @@ Host build
 Host stash.alm.mentorg.com
 	HostName stash.alm.mentorg.com
 	User git
+{{- if eq .profile "home" }}
 	ProxyCommand /usr/bin/env nc -x 192.168.1.100:1080 %h %p
+{{- end }}
 
 Host industrial.alm.mentorg.com
 	HostName industrial.alm.mentorg.com
 	User chombour
+{{- if eq .profile "home" }}
 	ProxyCommand /usr/bin/env nc -x 192.168.1.100:1080 %h %p
+{{- end }}
 
 Host india1
 	HostName 134.86.61.7
 	User chombourger
+{{- if eq .profile "home" }}
 	ProxyCommand /usr/bin/env nc -x 192.168.1.100:1080 %h %p
+{{- end }}
 
 Host india4
 	HostName 134.86.61.10
 	User chombourger
+{{- if eq .profile "home" }}
 	ProxyCommand /usr/bin/env nc -x 192.168.1.100:1080 %h %p
+{{- end }}
 
 Host node1
 	HostName 134.86.61.16
 	User bhima
+{{- if eq .profile "home" }}
+	ProxyCommand /usr/bin/env nc -x 192.168.1.100:1080 %h %p
+{{- end }}
 
 Host node4
 	HostName 134.86.61.8
 	User chombourger
+{{- if eq .profile "home" }}
 	ProxyCommand /usr/bin/env nc -x 192.168.1.100:1080 %h %p
+{{- end }}
 
 Host node5
 	HostName 134.86.61.14
 	User narmada
+{{- if eq .profile "home" }}
 	ProxyCommand /usr/bin/env nc -x 192.168.1.100:1080 %h %p
+{{- end }}
 
 Host koshi
 	HostName 134.86.61.15
 	User chombourger
+{{- if eq .profile "home" }}
 	ProxyCommand /usr/bin/env nc -x 192.168.1.100:1080 %h %p
+{{- end }}
 
 {{- end }}
