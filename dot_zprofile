@@ -1,1 +1,5 @@
-[ -f ~/.bash_profile ] && source ~/.bash_profile
+for file in ~/.bashrc.d/*.bashrc;
+do
+    [ -f ${file} ] || continue
+    . ${file}
+done
