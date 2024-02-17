@@ -4,4 +4,6 @@ do
     . ${file}
 done
 
-eval "$(zoxide init zsh)"
+if [ -f ~/.local/bin/zoxide ]; then
+    eval "$(zoxide init zsh)"
+fi
