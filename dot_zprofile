@@ -5,5 +5,7 @@ do
 done
 
 if [ -f ~/.local/bin/zoxide ]; then
+    # install with:
+    # curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
     eval "$(zoxide init zsh)"
 fi
