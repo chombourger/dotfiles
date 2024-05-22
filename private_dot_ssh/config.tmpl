@@ -1,19 +1,7 @@
 Host *
 	ServerAliveInterval 3
 
-Host build
-	HostName 192.168.1.18
-	User chombourger
-
 {{- if eq .email "cedric.hombourger@siemens.com" }}
-
-Host stash.alm.mentorg.com
-	HostName stash.alm.mentorg.com
-	User git
-
-Host industrial.alm.mentorg.com
-	HostName industrial.alm.mentorg.com
-	User chombour
 
 Host india1
 	HostName 134.86.61.7
