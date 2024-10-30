@@ -1,5 +1,7 @@
 Host *
 	ServerAliveInterval 3
+	IdentityFile ~/.ssh/id_rsa.pub
+	IdentityFile ~/.ssh/id_rsa4096.pub
 
 {{- if eq .email "cedric.hombourger@siemens.com" }}
 
