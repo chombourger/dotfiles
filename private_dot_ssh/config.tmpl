@@ -2,25 +2,11 @@ Host *
 	ServerAliveInterval 3
 	IdentityFile ~/.ssh/id_rsa
 	IdentityFile ~/.ssh/id_rsa4096
-	ProxyCommand ncat --proxy-type socks5 --proxy 192.168.1.105:1080 %h %p
 
 {{- if eq .email "cedric.hombourger@siemens.com" }}
 
-Host india1
-	HostName 134.86.61.7
-	User chombourger
-
-Host node1
-	HostName 134.86.61.16
-	User bhima
-
-Host node4
-	HostName 134.86.61.8
-	User chombourger
-
-Host kabini
-	HostName 134.86.61.10
-	User kabini
+Host s-*
+	ProxyCommand ncat --proxy-type socks5 --proxy 192.168.1.105:1080 %h %p
 
 Host narmada
 	HostName 134.86.61.14
@@ -35,6 +21,10 @@ Host sutlej
 	User sutlej
 
 Host fdsbng1
+	HostName 129.103.116.36
+	User chombourger
+
+Host s-fdsbng1
 	HostName 129.103.116.36
 	User chombourger
 
