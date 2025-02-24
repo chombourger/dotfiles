@@ -1,1 +1,3 @@
-alias kas-isar="kas-docker --isar --ssh-dir $HOME/.ssh --runtime-args '-v /dev:/dev -v $HOME/.gitconfig:/etc/gitconfig'"
+function kas-isar
+    ./kas-container --isar --ssh-dir $HOME/.ssh --runtime-args --net=host $argv
+end
