@@ -11,7 +11,7 @@ Host exserver.faiot.com
         IdentityFile ~/.ssh/id_faiot_ed25519
 
 Host s-*
-	ProxyCommand ncat --proxy-type socks5 --proxy 192.168.1.105:1080 %h %p
+	ProxyCommand ncat --proxy-type socks5 --proxy 192.168.1.108:1080 %h %p
 
 Host narmada
 	HostName 134.86.61.14
